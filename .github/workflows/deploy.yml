@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy over SSH
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@34.234.64.109 << 'EOF'
+        ssh -tt -o StrictHostKeyChecking=no ubuntu@34.234.64.109 << 'EOF'
           cd /home/ubuntu/next-aws-ec2
           git pull
           npm install
